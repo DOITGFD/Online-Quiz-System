@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Panel</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Add Question</h2>
+
+<input id="q" placeholder="Question"><br><br>
+
+<input id="o1" placeholder="Option 1"><br><br>
+<input id="o2" placeholder="Option 2"><br><br>
+<input id="o3" placeholder="Option 3"><br><br>
+<input id="o4" placeholder="Option 4"><br><br>
+
+<input id="ans" placeholder="Correct Option (1-4)"><br><br>
+
+<button onclick="addQuestion()">Add Question</button>
+
+</div>
+
+<script>
+
+function addQuestion(){
+
+var q = document.getElementById("q").value;
+
+var options = [
+document.getElementById("o1").value,
+document.getElementById("o2").value,
+document.getElementById("o3").value,
+document.getElementById("o4").value
+];
+
+var ans = document.getElementById("ans").value;
+
+var questions = JSON.parse(localStorage.getItem("questions")) || [];
+
+questions.push({
+question:q,
+options:options,
+answer:ans
+});
+
+localStorage.setItem("questions",JSON.stringify(questions));
+
+alert("Question Added");
+
+}
+
+</script>
+
+</body>
+</html>
