@@ -1,45 +1,49 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Online Quiz Login</title>
-<link rel="stylesheet" href="style.css">
+    <title>Online Quiz Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="container">
+    <div class="container">
 
-<h1>Online Quiz System</h1>
+        <h1 class="title">Online Quiz System</h1>
 
-<input type="text" id="username" placeholder="Enter Name">
+        <input type="text" id="username" name="username" class="input-field" placeholder="Enter Name" title="Enter your name to start the quiz">
 
-<br><br>
+        <br><br>
 
-<button onclick="startQuiz()">Start Quiz</button>
+        <button type="button" class="start-btn" title="Click to start the quiz" onclick="startQuiz()">
+Start Quiz
+</button>
 
-<br><br>
+        <br><br>
 
-<a href="admin.html">Admin Panel</a>
+        <a href="admin.html" class="admin-link" title="Go to admin panel">
+Admin Panel
+</a>
 
-</div>
+    </div>
 
-<script>
+    <script>
+        function startQuiz() {
 
-function startQuiz(){
+            var name = document.getElementById("username").value;
 
-var name = document.getElementById("username").value;
+            if (name == "") {
+                alert("Enter your name");
+                return;
+            }
 
-if(name==""){
-alert("Enter your name");
-return;
-}
+            localStorage.setItem("username", name);
+            window.location.href = "quiz.html";
 
-localStorage.setItem("username",name);
-window.location.href="quiz.html";
-
-}
-
-</script>
+        }
+    </script>
 
 </body>
+
 </html>
