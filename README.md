@@ -82,6 +82,7 @@ Reduces manual work
 Accessible from any device with a browser
 
 
-<img width="462" height="211" alt="Screenshot 2026-03-10 at 11 21 35 AM" src="https://github.com/user-attachments/assets/64ef55d3-b28d-4c84-b657-fc7027e6b498" />
-<img width="408" height="386" alt="Screenshot 2026-03-10 at 11 21 45 AM" src="https://github.com/user-attachments/assets/b8719d8c-5c46-4050-93ac-1da66912961d" />
-<img width="373" height="289" alt="Screenshot 2026-03-10 at 11 21 52 AM" src="https://github.com/user-attachments/assets/d07fdcac-e3bf-48ed-aa49-4494a7315646" />
+<img width="641" height="313" alt="Screenshot 2026-03-10 at 12 32 46 PM" src="https://github.com/user-attachments/assets/fd217575-be8d-44a6-99c6-35bfff0c89f3" />
+<img width="732" height="717" alt="Screenshot 2026-03-10 at 12 32 56 PM" src="https://github.com/user-attachments/assets/28420d59-60c9-4e8e-a7c9-030501c46f52" />
+<img width="599" height="726" alt="Screenshot 2026-03-10 at 12 33 17 PM" src="https://github.com/user-attachments/assets/d2806385-f095-4d8a-8001-c29b7b71e40d" />
+
