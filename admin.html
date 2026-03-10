@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Online Quiz Login</title>
+    <title>Admin Panel</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -10,36 +10,63 @@
 
     <div class="container">
 
-        <h1 class="title">Online Quiz System</h1>
+        <h2 class="title">Add Question</h2>
 
-        <input type="text" id="username" name="username" class="input-field" placeholder="Enter Name" title="Enter your name to start the quiz">
+        <input type="text" id="q" name="question" class="input-field" placeholder="Question" title="Enter the quiz question">
 
         <br><br>
 
-        <button type="button" class="start-btn" title="Click to start the quiz" onclick="startQuiz()">
-Start Quiz
+        <input type="text" id="o1" name="option1" class="input-field" placeholder="Option 1" title="Enter first option">
+
+        <br><br>
+
+        <input type="text" id="o2" name="option2" class="input-field" placeholder="Option 2" title="Enter second option">
+
+        <br><br>
+
+        <input type="text" id="o3" name="option3" class="input-field" placeholder="Option 3" title="Enter third option">
+
+        <br><br>
+
+        <input type="text" id="o4" name="option4" class="input-field" placeholder="Option 4" title="Enter fourth option">
+
+        <br><br>
+
+        <input type="number" id="ans" name="answer" class="input-field" placeholder="Correct Option (1-4)" title="Enter the correct option number" min="1" max="4">
+
+        <br><br>
+
+        <button type="button" class="add-btn" title="Click to add question" onclick="addQuestion()">
+Add Question
 </button>
-
-        <br><br>
-
-        <a href="admin.html" class="admin-link" title="Go to admin panel">
-Admin Panel
-</a>
 
     </div>
 
     <script>
-        function startQuiz() {
+        function addQuestion() {
 
-            var name = document.getElementById("username").value;
+            var q = document.getElementById("q").value;
 
-            if (name == "") {
-                alert("Enter your name");
-                return;
-            }
+            var options = [
+                document.getElementById("o1").value,
+                document.getElementById("o2").value,
+                document.getElementById("o3").value,
+                document.getElementById("o4").value
+            ];
 
-            localStorage.setItem("username", name);
-            window.location.href = "quiz.html";
+            var ans = document.getElementById("ans").value;
+
+            var questions = JSON.parse(localStorage.getItem("questions")) || [];
+
+            questions.push({
+                question: q,
+                options: options,
+                answer: ans
+            });
+
+            localStorage.setItem("questions", JSON.stringify(questions));
+
+            alert("Question Added");
 
         }
     </script>
